@@ -1,0 +1,94 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.125rem; // 18px/16px
+    line-height: 1.3;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.flex {
+    display: flex;
+
+    &-col {
+        flex-direction: column;
+    }
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-se {
+        justify-content: space-evenly;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-jc-fe {
+        justify-content: flex-end;
+    }
+
+    &-jc-fs {
+        justify-content: flex-start;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+
+    &-ai-t {
+        align-items: flex-start;
+    }
+
+    &-ai-b {
+        align-items: flex-end;
+    }
+}
+
+// Buttons
+button, .button {
+    color: $desaturatedBlue;
+    background-color: $white;
+    font-family: 'Fraunces', serif;
+    font-size: $font-sm;
+    padding: 0.75rem 1.6875rem;
+    border-radius: 50px;
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+// Visibility
+.mobile {
+    @include breakpoint-up(large){
+        display: none;
+    }
+}
+
+.desktop {
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}

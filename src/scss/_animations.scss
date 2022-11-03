@@ -1,0 +1,175 @@
+@keyframes fade-in {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fade-in 300ms ease-in-out forwards ;
+}
+
+ @keyframes fade-out {
+     from {
+        visibility: visible;
+         opacity: 1;
+     }
+
+     99% {
+        visibility: visible;
+        opacity: 0;
+     }
+
+     to {
+        visibility: hidden;
+        opacity: 0;
+     }
+ }
+
+.fade-out {
+    animation: fade-out 300ms ease-in-out forwards;
+}
+
+@keyframes slide-in-left {
+	from {
+        transform: translateX(-400%);
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+.slide-in-left {
+	animation: slide-in-left 0.8s ease-out forwards;
+}
+
+@keyframes slide-in-right {
+	from {
+        transform: translateX(400%);
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+.slide-in-right-d2s {
+	animation: slide-in-right 0.8s ease-out 1.6s forwards;
+}
+
+@keyframes slide-in-top {
+	from {
+        transform: translateY(-400%);
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+.slide-in-top-d1s {
+	animation: slide-in-top 0.8s ease-out 0.8s forwards;
+}
+
+@keyframes bannerOne{
+    0% {
+        left: 0;
+        opacity: 1;
+    }
+    34% {
+        left: -33%;
+        opacity: 0;
+    }
+    35% {
+        left: 67%;
+        opacity: 0;
+      }
+    36% {
+        left: 67%;
+        opacity: 1;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.carouselOne {
+	animation: bannerOne 15s linear infinite;
+}
+  
+@keyframes bannerTwo{
+    0% {
+        left: 0;
+        opacity: 1;
+    }
+    34% {
+        left: -33%;
+        opacity: 1;
+    }
+    64% {
+        left: -67%;
+        opacity: 0;
+    }
+    65% {
+        left: 33%;
+        opacity: 0;
+    }
+    66% {
+        left: 33%;
+        opacity: 1;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.carouselTwo {
+	animation: bannerTwo 15s linear infinite;
+}
+  
+@keyframes bannerThree{
+    0% {
+        left: 0;
+        opacity: 1;
+    }
+    34% {
+        left: -33%;
+        opacity: 1;
+    }
+    64% {
+        left: -67%;
+        opacity: 1;
+    }
+    65% {
+        left: -100%;
+        opacity: 0;
+    }
+    99% {
+        left: 0;
+        opacity: 0;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.carouselThree {
+	animation: bannerThree 15s linear infinite;
+}

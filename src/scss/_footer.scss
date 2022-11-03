@@ -1,0 +1,26 @@
+.footer {
+    color: $white;
+    background-color: $moderateCyan;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 80px;
+
+    &__links {
+        margin-top: 40px;
+        margin-bottom: 85px;
+
+        a {
+            color: $desaturatedCyan;
+        }
+
+        a:not(:last-child) {
+            margin-right: 60px;
+        }
+    }
+
+    &__icons {
+        a:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+}

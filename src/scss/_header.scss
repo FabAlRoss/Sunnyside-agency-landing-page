@@ -1,0 +1,113 @@
+.header {
+    background-color: $lightBlue;
+    
+    nav {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    &__logo {
+        img {
+            @include breakpoint-down(medium){
+                width: 8.04375rem;
+                height: 1.5625rem;
+            }
+            @include breakpoint-up(large){
+                width: 10,946875rem;
+                height: 2.125rem;
+            }
+        }
+    }
+
+    &__hamburger {
+
+        > span {
+            display: block;
+            background-color: $white;
+            border-radius: 2px;
+            width: 26px;
+            height: 3px;
+            transition: all 300ms ease-in-out;
+
+            &:not(:last-child) {
+                margin-bottom: 4px;
+            }
+        }
+
+        &.open {
+
+            > span:first-child {
+                transform: translateY(7px) rotate(45deg);
+            }
+
+            > span:nth-child(2) {
+                opacity: 0;
+            }
+
+            > span:last-child {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+        }
+    }
+
+    &__links {
+
+        a {
+            &:not(.button) {
+                font-size: $font-sm;
+                color: $white;
+                margin-right: 50px;
+
+                display: inline;
+                position: relative;
+                overflow: hidden;
+
+                &::after {
+                    content: '';
+                    width: 0%;
+                    height: 2px;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    background: $white;
+                    transition: width 300ms ease-in-out;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+        height: 330px;
+        max-height: 330px;
+        z-index: 2;
+
+        div {
+            position: absolute;
+            padding-right: calc((330px - 110px) / 2);
+            margin-top: 75px;
+
+            a {
+                display: block;
+                text-align: center;
+
+                &:not(.button) {
+                    font-size: $font-sm;
+                    color: $veryDarkGrayishBlue;
+                    margin-bottom: 35px;
+                }
+
+                &.button {
+                    background-color: $lemonYellow;
+                }
+            }
+        }
+    }
+}

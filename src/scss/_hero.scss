@@ -1,0 +1,59 @@
+.hero {
+    color: $white;
+    background-color: $lightBlue;
+    font-family: 'Fraunces', serif;
+    letter-spacing: 6px;
+
+    span {
+        display: inline-block;
+    }
+
+    svg {
+        opacity: 0;
+        animation: fade-in 700ms ease-in-out 2.4s forwards ;
+    }
+
+    &__welcome {
+        padding-top: 85px;
+        padding-bottom: 45px;
+    }
+
+    &__image {
+        flex-direction: column;
+        background-image: url("@/assets/images/mobile/image-header.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        height: 460px;
+        font-size: 30px;
+        text-align: center;
+
+        @include breakpoint-up(medium){
+            background-image: url("@/assets/images/desktop/image-header.jpg");
+            font-size: 48px;
+        }
+
+        @include breakpoint-up(large){
+            height: 650px;
+        }
+
+        @include breakpoint-up(xlarge){
+            background-size: 80%;
+        }
+    }
+}
+
+.we {
+    transform: translateX(-400%);
+	opacity: 0;
+}
+
+.are {
+    transform: translateY(-400%);
+	opacity: 0;
+}
+
+.creatives {
+    transform: translateX(400%);
+	opacity: 0;
+}
